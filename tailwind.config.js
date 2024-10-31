@@ -1,5 +1,8 @@
 // tailwind.config.js
 module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // Đảm bảo đường dẫn chính xác đến các file của bạn
+  ],
   theme: {
     extend: {},
     screens: {

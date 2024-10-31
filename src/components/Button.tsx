@@ -1,11 +1,10 @@
-// src/components/Button.tsx
 import React from "react";
 
 interface ButtonProps {
   label: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary"; // Thêm các kiểu variant
+  variant?: "primary" | "secondary";
 }
 
 const Button: React.FC<ButtonProps> = ({
