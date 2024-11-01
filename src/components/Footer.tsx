@@ -7,8 +7,8 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
-} from "react-icons/fa"; // Nhập biểu tượng từ react-icons
-import logo from "../assets/logo.png"; // Nhập logo từ thư mục assets
+} from "react-icons/fa"; // Import icons from react-icons
+import logo from "../assets/logo.png"; // Import logo from assets folder
 
 interface Link {
   name: string;
@@ -39,15 +39,15 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="max-w-screen-lg pt-4 pb-0 px-4 sm:px-6 mx-auto">
-        <div className="flex justify-between">
+      <div className="pt-4 pb-0 px-4 sm:px-6 mx-auto">
+        <div className="flex flex-col sm:flex-row justify-between">
           {/* Company Info */}
           <div className="p-5 sm:w-4/12 flex flex-col items-center">
             <div className="flex items-center mb-4">
               <img src={logo} alt="Maven Logo" className="h-12 mr-2" />
-              <h3 className="font-bold text-3xl">Maven</h3>
+              <h3 className="font-bold text-3xl text-center">Maven</h3>
             </div>
-            <p className="text-gray-300 text-sm text-center">
+            <p className="text-gray-300 text-xs sm:text-sm text-center">
               Maximize your capital market investment with Maven's convenience
               and variety of options.
             </p>
@@ -69,11 +69,11 @@ const Footer = () => {
           {/* Company Links */}
           <div className="p-5 sm:w-4/12 text-center">
             <h3 className="font-bold text-lg mb-4">Companies</h3>
-            <ul className="space-y-1 flex flex-col items-center">
+            <ul className="space-y-1 flex flex-col ">
               {companyLinks.map((link) => (
                 <li key={link.name} className="w-full text-center">
                   <a
-                    className="text-blue-400 hover:text-blue-300 text-sm md:text-base"
+                    className="text-blue-400 hover:text-blue-300 text-xs sm:text-sm md:text-base "
                     href={link.href}
                   >
                     {link.name}
@@ -90,11 +90,11 @@ const Footer = () => {
               {contactLinks.map((link) => (
                 <li
                   key={link.name}
-                  className="my-2 flex items-center justify-center"
+                  className="my-2 flex items-center justify-center text-xs sm:text-sm"
                 >
                   <span className="text-blue-400 mr-2">{link.icon}</span>
                   <a
-                    className="text-blue-400 hover:text-blue-300 text-sm md:text-base"
+                    className="text-blue-400 hover:text-blue-300"
                     href={link.href}
                   >
                     {link.name}
