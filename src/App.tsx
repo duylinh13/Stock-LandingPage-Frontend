@@ -9,9 +9,13 @@ import MavenSupport from "./components/sections/MavenSupport";
 
 const App = () => {
   return (
-    <div className="bg-gray-100 text-gray-900">
+    <div className="bg-gray-900 text-white min-h-screen">
+      {" "}
+      {/* Đảm bảo nền tối và chữ sáng */}
       <Header />
-      <main>
+      <main className="bg-gray-900">
+        {" "}
+        {/* Đảm bảo phần chính cũng có nền tối */}
         <HeroSection />
         <InvestInStock />
         <AboutSection />
