@@ -49,7 +49,11 @@ const HeroSection = () => {
 
       {/* Button */}
       <div className="my-6 sm:my-8">
-        <Button label="Start Trading Now!" variant="primary" />
+        <Button
+          label="Start Trading Now!"
+          variant="primary"
+          className="shadow-lg shadow-blue-500/50 transform translate-y-1"
+        />
       </div>
     </div>
   );
