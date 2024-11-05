@@ -1,11 +1,11 @@
-// src/components/Button.tsx
 import React from "react";
 
 interface ButtonProps {
   label: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary"; // Thêm các kiểu variant
+  variant?: "primary" | "secondary";
+  className?: string; // Thêm className vào props
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,6 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   type = "button",
   variant = "primary",
+  className = "", // Đặt className mặc định là chuỗi rỗng
 }) => {
   const baseStyles =
     "px-4 py-2 rounded-full font-semibold transition-all duration-300";
@@ -25,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       className={`${baseStyles} ${
         variant === "primary" ? primaryStyles : secondaryStyles
-      }`}
+      } ${className}`}
     >
       {label}
     </button>

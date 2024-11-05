@@ -9,9 +9,9 @@ import MavenSupport from "./components/sections/MavenSupport";
 
 const App = () => {
   return (
-    <div className="bg-gray-100 text-gray-900">
+    <div className="bg-gray-900 text-white min-h-screen">
       <Header />
-      <main>
+      <main className="bg-gray-900">
         <HeroSection />
         <InvestInStock />
         <AboutSection />
