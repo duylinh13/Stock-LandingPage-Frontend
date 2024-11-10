@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -7,8 +6,8 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
-} from "react-icons/fa"; // Import icons from react-icons
-import logo from "../assets/logo.png"; // Import logo from assets folder
+} from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 interface Link {
   name: string;
@@ -41,7 +40,6 @@ const Footer = () => {
     <footer>
       <div className="pt-4 pb-0 px-4 sm:px-6 mx-auto">
         <div className="flex flex-col sm:flex-row justify-between">
-          {/* Company Info */}
           <div className="p-5 sm:w-4/12 flex flex-col items-center footer-section">
             <div className="flex items-center mb-4">
               <img
@@ -56,7 +54,6 @@ const Footer = () => {
               and variety of options.
             </p>
 
-            {/* Social Links */}
             <div
               className="flex space-x-4 mt-4"
               aria-label="Social Media Links"
@@ -74,7 +71,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Company Links */}
           <div className="p-5 sm:w-4/12 text-center footer-section">
             <h3 className="font-bold text-lg mb-4">Companies</h3>
             <ul className="space-y-1 flex flex-col ">
@@ -91,7 +87,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Links */}
           <div className="p-5 sm:w-4/12 text-center footer-section">
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <ul>
