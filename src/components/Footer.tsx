@@ -42,9 +42,13 @@ const Footer = () => {
       <div className="pt-4 pb-0 px-4 sm:px-6 mx-auto">
         <div className="flex flex-col sm:flex-row justify-between">
           {/* Company Info */}
-          <div className="p-5 sm:w-4/12 flex flex-col items-center">
+          <div className="p-5 sm:w-4/12 flex flex-col items-center footer-section">
             <div className="flex items-center mb-4">
-              <img src={logo} alt="Maven Logo" className="h-12 mr-2" />
+              <img
+                src={logo}
+                alt="Maven Logo - Capital Market Investment Platform"
+                className="h-12 mr-2"
+              />
               <h3 className="font-bold text-3xl text-center">Maven</h3>
             </div>
             <p className="text-gray-300 text-xs sm:text-sm text-center">
@@ -53,12 +57,16 @@ const Footer = () => {
             </p>
 
             {/* Social Links */}
-            <div className="flex space-x-4 mt-4">
+            <div
+              className="flex space-x-4 mt-4"
+              aria-label="Social Media Links"
+            >
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   className="text-blue-400 hover:text-blue-300 text-xl"
+                  aria-label={link.name}
                 >
                   {link.icon}
                 </a>
@@ -67,7 +75,7 @@ const Footer = () => {
           </div>
 
           {/* Company Links */}
-          <div className="p-5 sm:w-4/12 text-center">
+          <div className="p-5 sm:w-4/12 text-center footer-section">
             <h3 className="font-bold text-lg mb-4">Companies</h3>
             <ul className="space-y-1 flex flex-col ">
               {companyLinks.map((link) => (
@@ -84,7 +92,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Links */}
-          <div className="p-5 sm:w-4/12 text-center">
+          <div className="p-5 sm:w-4/12 text-center footer-section">
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <ul>
               {contactLinks.map((link) => (

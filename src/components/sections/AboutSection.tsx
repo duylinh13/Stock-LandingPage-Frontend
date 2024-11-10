@@ -4,17 +4,15 @@ const AboutSection = () => {
   return (
     <div className=" py-16 px-4 sm:px-8 lg:px-16 text-center">
       <div className="max-w-2xl mx-auto space-y-4">
-        <p className="text-2xl sm:text-4xl text-blue-800 font-bold">
-          One platform
-        </p>
-        <p className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">
+        <p className="text-[32px] text-blue-800 font-bold">One platform</p>
+        <p className="text-[32px] font-bold mb-4 sm:mb-6">
           All Things Stocks Smart Investment
         </p>
 
-        <p className="text-gray-600 text-lg">
+        <p className="text-gray-600 text-xl">
           Invest Your Funds with Us and Enjoy Astonishing Returns
         </p>
-        <p className="text-gray-500 text-md">
+        <p className="text-gray-500 text-xl">
           Make the most of your investment in the world of capital markets by
           taking <br className="hidden md:inline" />
           advantage of Maven's many features and conveniences.

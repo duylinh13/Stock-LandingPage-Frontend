@@ -3,25 +3,25 @@ import Button from "../components/Button";
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white py-4 md:py-8 px-4 md:px-10 flex items-center justify-between">
-      <div className="flex items-center space-x-2">
+    <header className="bg-gray-900 text-white py-4 px-4 flex items-center justify-between flex-wrap md:flex-nowrap">
+      {/* Logo and Title */}
+      <div className="flex items-center space-x-2 mb-2 md:mb-0">
         <img
           src={logo}
           alt="Maven Trading Logo"
-          className="h-6 w-6 md:h-8 md:w-8"
+          className="h-8 w-8 sm:h-10 sm:w-10"
         />
-        <h1 className="text-xl md:text-2xl font-bold hidden sm:block">
-          Maven Trading
-        </h1>
+        <h1 className="text-2xl sm:text-3xl font-bold">Maven Trading</h1>
       </div>
 
-      <nav className="hidden sm:block ">
-        <ul className="flex space-x-2 md:space-x-4 gap-2 md:gap-4">
+      {/* Navigation Links */}
+      <nav className="w-full md:w-auto mb-2 md:mb-0">
+        <ul className="flex justify-center md:justify-start space-x-2 md:space-x-4 text-sm sm:text-lg lg:text-xl">
           {["Chart", "Markets", "News", "Community", "More"].map(
             (item, index) => (
               <li key={index}>
                 <button
-                  className="text-blue-400 hover:text-blue-300 text-sm md:text-base"
+                  className="text-blue-400 hover:text-blue-300"
                   aria-label={item}
                 >
                   {item}
@@ -32,9 +32,18 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div className="flex items-center space-x-2 md:space-x-4">
-        <Button label="Login" variant="secondary" />
-        <Button label="Start Free Trial" variant="primary" />
+      {/* Buttons for Login and Start Free Trial */}
+      <div className="flex items-center space-x-2 sm:space-x-4">
+        <Button
+          label="Login"
+          variant="secondary"
+          className="text-sm sm:text-lg"
+        />
+        <Button
+          label="Start Free Trial"
+          variant="primary"
+          className="text-sm sm:text-lg"
+        />
       </div>
     </header>
   );
